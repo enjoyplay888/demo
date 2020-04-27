@@ -1,0 +1,13 @@
+<?php
+$arr1=array_merge(range('A','Z'),range(0,9),range('a','z'));
+shuffle($arr1);  //打亂數組
+$arr2=array_rand($arr1,4);  //從數組中隨機取4位下標
+//print_r($arr2);  //結果中前面下標是$arr2，後面的值是$arr1的下標
+
+//循環$arr2，取出指定下標對應的值
+$str="";
+foreach($arr2 as $index){
+    $str .=$arr1[$index];
+}
+echo $str;
+?>
